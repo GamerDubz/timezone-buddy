@@ -1,2 +1,88 @@
 @import "tailwindcss";
-* { box-sizing: border-box; }
+
+:root {
+  --color-bg: #eef6fb;
+  --color-bg-raised: #f8fcfe;
+  --color-surface: #ffffff;
+  --color-ink: #0b2036;
+  --color-ink-soft: #3c5670;
+  --color-ink-faint: #7690a6;
+  --color-border: #d2e3ee;
+  --color-border-strong: #b7d1e2;
+  --color-accent: #d98c3f;
+  --color-accent-ink: #6b3d0f;
+  --color-accent-soft: #fbe7cf;
+  --color-day: #eaf4fb;
+  --color-day-strong: #d9ecf9;
+  --color-twilight: #cfd9ea;
+  --color-night: #26405c;
+  --color-night-strong: #16283c;
+  --color-focus: #b8631c;
+
+  --font-sans: var(--font-body), "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-tabular), "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  --shadow-card: 0 1px 2px rgba(11, 32, 54, 0.06), 0 8px 24px -12px rgba(11, 32, 54, 0.18);
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(60rem 30rem at 85% -10%, rgba(217, 140, 63, 0.07), transparent 60%),
+    radial-gradient(50rem 40rem at -10% 20%, rgba(23, 68, 107, 0.06), transparent 55%);
+  background-attachment: fixed;
+}
+
+.tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+}
+
+::selection {
+  background: var(--color-accent-soft);
+  color: var(--color-accent-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.rise-in {
+  animation: rise-in 0.42s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
