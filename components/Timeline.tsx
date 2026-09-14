@@ -89,10 +89,10 @@ export function Timeline({ zones, anchor, referenceDate, hour12, onScrub, onRemo
 
   return (
     <div
-      className="rise-in relative overflow-hidden rounded-2xl border"
+      className="rise-in relative rounded-2xl border"
       style={{ borderColor: 'var(--color-border)', background: 'var(--color-surface)', boxShadow: 'var(--shadow-card)' }}
     >
-      <div className="grid" style={{ gridTemplateColumns: `${labelColumn} 1fr` }}>
+      <div className="overflow-hidden rounded-2xl grid" style={{ gridTemplateColumns: `${labelColumn} 1fr` }}>
         {zones.map((tz, i) => {
           const offset = formatOffsetLabel(getOffsetMinutes(referenceDate, tz.tz))
           const showLast = i === zones.length - 1
