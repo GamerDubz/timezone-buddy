@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <linearGradient id="tzGrad" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="50%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    <linearGradient id="sunGrad" x1="6" y1="6" x2="16" y2="26" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#EA580C" />
+    </linearGradient>
+    <linearGradient id="moonGrad" x1="16" y1="6" x2="26" y2="26" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E1B4B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+  </defs>
+  <!-- Outer squircle -->
+  <rect x="2" y="2" width="28" height="28" rx="8" fill="url(#tzGrad)" />
+  
+  <!-- Dial face cutout -->
+  <circle cx="16" cy="16" r="11" fill="#FFFFFF" />
+
+  <!-- Left half (Day/Sun) -->
+  <path d="M16 5C9.92487 5 5 9.92487 5 16C5 22.0751 9.92487 27 16 27V5Z" fill="#FEF3C7" />
+  <circle cx="12" cy="13" r="3" fill="url(#sunGrad)" />
+
+  <!-- Right half (Night/Moon) -->
+  <path d="M16 5C22.0751 5 27 9.92487 27 16C27 22.0751 22.0751 27 16 27V5Z" fill="#1E293B" />
+  <!-- Moon crescent -->
+  <path d="M20 12C18.3431 12 17 13.3431 17 15C17 16.6569 18.3431 18 20 18C20.4 18 20.77 17.92 21.1 17.77C20.44 17.06 20.03 16.1 20.03 15.05C20.03 13.97 20.46 13 21.15 12.28C20.8 12.1 20.41 12 20 12Z" fill="#38BDF8" />
+  <circle cx="23" cy="11" r="0.75" fill="#FFFFFF" />
+
+  <!-- Meridian line & Center Pin -->
+  <line x1="16" y1="5" x2="16" y2="27" stroke="#0284C7" stroke-width="1.2" stroke-dasharray="1 1" />
+  <circle cx="16" cy="16" r="1.8" fill="#0284C7" />
+  <circle cx="16" cy="16" r="0.7" fill="#FFFFFF" />
+</svg>
